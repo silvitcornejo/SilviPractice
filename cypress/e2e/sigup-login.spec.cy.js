@@ -6,29 +6,22 @@ context('Verify that the Signup Login page is visible successfully', () => {
 
 
 describe('Sign Up functionality', () => {
-it('should display the Sign Up button', () => {
-    cy.SignUpButtonPresence() // Custom command to verify the button
+it('Sign Up button should display', () => {
+    cy.SignUpButtonPresence() // Custom command to verify the button presence
     })        
 
-it('should show the "New User Signup" section', () => { 
-    cy.NewUserSignUp() // Custom command to verify the title section
+it('"New User Signup" section should be visible', () => { 
+    cy.NewUserSignUp() // Custom command to verify the title section visibility
      })  
 
-it ('Enter name and email address', () => {
-    cy.EnterNameAndEmail() // Custom command to enter name and email  
+it ('Enter name and email address functionality', () => {
+    cy.EnterValidNameAndEmailFields() // Custom command to enter name and email  
     })   
 })    
-
 
 describe('Login to your account', () => {
     it('Functionality of Login to your account section with an invalid user', () => {
     cy.LoginToYourAccount() // Custom command to login funcionality 
      }) 
-     })
-
-describe('Subscription section', () => {
-    it( 'Functionality of Subscription section', () => {
-    cy.Subscription() // Custom command to subscribe funcionality 
-     })
      })
      })

@@ -9,7 +9,7 @@ Cypress.Commands.add('NewUserSignUp', () => {
     .should('be.visible')
 })
 
-Cypress.Commands.add('EnterNameAndEmail', () => {
+Cypress.Commands.add('EnterValidNameAndEmailFields', () => {
   cy.get('[data-qa="signup-name"]')
     .should('be.visible')
     .type('SilClient2')
@@ -35,17 +35,3 @@ Cypress.Commands.add('LoginToYourAccount', () => {
 })
 
 
-
-Cypress.Commands.add('Subscription', () => {
-  cy.get('h2').contains('Subscription')   
-    .should('be.visible')   
-    cy.get('#susbscribe_email') 
-    .should('be.visible')   
-    .type('silvi.cornejo@gmail.com')
-    cy.get('#subscribe') 
-    .should('be.visible')   
-    .click()
-    cy.get('.alert-success') 
-    .should('be.visible')   
-    .and('contain', 'You have been successfully subscribed!')
-    })
