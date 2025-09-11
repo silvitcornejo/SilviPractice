@@ -1,0 +1,24 @@
+{
+  "name": "silvipractice",
+  "version": "1.0.0",
+  "description": "This is a personal repository \r # Pre- Requisits\r Have nodejs LTS installed",
+  "main": "index.js",
+  "scripts": {
+  "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvitcornejo/SilviPractice.git"
+  },
+  "keywords": [],
+  "author": "Silvit",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/silvitcornejo/SilviPractice/issues"
+  },
+  "homepage": "https://github.com/silvitcornejo/SilviPractice#readme",
+  "devDependencies": {
+    "cypress": "^15.2.0"
+  }
+}
