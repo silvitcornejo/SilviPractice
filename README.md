@@ -8,6 +8,7 @@ On the root of the project run npm install
 
 # Running the tests
 run npm run dev & npm run cypress:open this will have the web server running at the same time as the Cypress UI opens and you can run the tests.
+
 NOTE: Headless mode won't work because it won't have the Redux Dev Tools and the tests will fail
 
 # Approach
