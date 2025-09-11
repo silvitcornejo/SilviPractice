@@ -21,3 +21,4 @@ and I added the different relevant selectors and contextually relevant functions
 Under the e2e folder you will find the 3 Spec files matching the previously mentioned Page Object files
 
 # Page
+https://www.automationexercise.com/
