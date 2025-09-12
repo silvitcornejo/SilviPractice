@@ -5,7 +5,7 @@ Cypress.Commands.add('CarrouselPresence', () => {
 
 Cypress.Commands.add('CarrouselFunctionality', (selector) => {
   cy.get(selector).within(() => {
-    cy.wait(600) // ajusta según la animación
+    cy.wait(600) // adjust according to the animation
     cy.get('.item.active').should('have.length', 1)
   })
 })
