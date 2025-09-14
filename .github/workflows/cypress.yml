@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-      - develop   # (puedes ajustar las ramas donde quieres que corran los tests)
+      - develop   
 
 jobs:
   cypress-run:
@@ -17,10 +17,28 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24.8.0'   # o la versión que uses en tu proyecto
+          node-version: '24.8.0'
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Cypress tests
         run: npm run test
+
+  functional-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run Functional Tests
+        run: npx cypress run --spec "cypress/functional/**/*.cy.js"
