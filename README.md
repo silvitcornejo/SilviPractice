@@ -23,3 +23,11 @@ Under the e2e folder you will find the 3 Spec files matching the previously ment
 
 # Page
 https://www.automationexercise.com/
+
+## Workflows
+
+This repository includes GitHub Actions workflows to automate:
+
+- Running tests
+- Code linting
+- Automatic deployment
