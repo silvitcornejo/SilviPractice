@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - develop   
+  workflow_dispatch:  # allows manual triggering of the workflow
 
 jobs:
   e2e-tests:
