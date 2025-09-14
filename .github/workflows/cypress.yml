@@ -40,5 +40,5 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Run Functional Tests
-        run: npx cypress run --spec "cypress/functional/**/*.cy.js"
+      - name: Run E2E Tests
+        run:  npx cypress run --spec "cypress/e2e/**/*.cy.js"
