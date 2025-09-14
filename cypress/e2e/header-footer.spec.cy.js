@@ -12,7 +12,7 @@ context('Verify that the Signup Login page is visible successfully', () => {
 
  describe('Subscription footer', () => {
   it('should display all footer elements', () => {
-    cy.SubscriptionFooterPresence() // Custom command to verify Subscription footer
+    cy.SubscriptionFooterPresence() // Custom command to verify Subscription footers
   })
   })
     })
