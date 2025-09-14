@@ -14,8 +14,7 @@ Cypress.Commands.add('HeaderElementsPresence', () => {
     })
 })
 
-    
-Cypress.Commands.add('SubscriptionFooterPresence', () => {
+ Cypress.Commands.add('SubscriptionFooterPresence', () => {
   cy.get('h2').contains('Subscription')   
     .should('be.visible')   
     cy.get('#susbscribe_email') 

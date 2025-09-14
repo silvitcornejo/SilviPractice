@@ -12,4 +12,11 @@ context('Verify that the home page is visible successfully', () => {
       cy.CarrouselFunctionality('.col-sm-12'); // Custom command to verify the carousel functionality
     })
   })
+
+  describe('Add products to cart first two products to cart', () => {
+    it('should add products to cart', () => {
+      cy.AddProductsToCart(); // Custom command to add products two random products to cart
+      cy.RemoveProductsFromCart(); // Custom command to remove all products from cart
+    })  
+})
 })
