@@ -15,7 +15,7 @@ context('Verify that the home page is visible successfully', () => {
 
   describe('Add products to cart first two products to cart', () => {
     it('should add products to cart', () => {
-      cy.AddProductsToCart(); // Custom command to add products two random products to cart
+      cy.AddProductsToCart(); // Custom command to add two random products to cart
       cy.RemoveProductsFromCart(); // Custom command to remove all products from cart
     })  
 })
