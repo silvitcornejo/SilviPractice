@@ -5,3 +5,4 @@ const selectors = {
 Cypress.Commands.add("checkPageIsUp", () => {
     cy.get(selectors.page_body).should('be.visible')
 })
+
