@@ -1,0 +1,26 @@
+name: Cypress Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop   # (puedes ajustar las ramas donde quieres que corran los tests)
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'   # o la versión que uses en tu proyecto
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npm run test

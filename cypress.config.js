@@ -7,7 +7,7 @@ module.exports = defineConfig({
     baseUrl: 'https://www.automationexercise.com/',
      // --- Setup screenshots ---
     screenshotOnRunFailure: true, // take a screenshot when a test fails
-    screenshotsFolder: 'cypress/screenshots', // carpeta donde se guardan los screenshots
+    screenshotsFolder: 'cypress/screenshots', // folder where screenshots are saved
     setupNodeEvents(on, config) {
     },
   },
