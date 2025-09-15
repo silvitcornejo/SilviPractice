@@ -1,10 +1,9 @@
 name: Nightly Cypress Tests
 
-# it executes every day at 10:00 AM UTC
 on:
   schedule:
-    - cron: '0 10 * * *'  # time in UTC
-  workflow_dispatch:  # allows manual triggering of the workflow
+    - cron: '0 10 * * *'
+  workflow_dispatch:
 
 jobs:
   cypress-run:
@@ -12,18 +11,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.16
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run --headless --browser electron
+        run: npx cypress run
 
       - name: Upload screenshots
         if: failure()
