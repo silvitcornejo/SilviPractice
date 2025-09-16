@@ -2,7 +2,8 @@ name: Nightly Cypress Tests
 
 on:
   schedule:
-    - cron: '0 10 * * *'
+    # 10:00 AM Barcelona time (CEST/UTC+2 currently)
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
