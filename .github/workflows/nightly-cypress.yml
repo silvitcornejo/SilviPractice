@@ -9,6 +9,8 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    env:
+      TERM: xterm   # Prevents "tput: No value for $TERM" warnings
 
     steps:
       - name: Checkout repository
@@ -23,11 +25,17 @@ jobs:
         run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: |
+          echo "::group::Running Cypress tests"
+          npx cypress run || { 
+            echo "::error::❌ Cypress tests failed. Check screenshots artifact."; 
+            exit 1; 
+          }
+          echo "::endgroup::"
 
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
+          name: cypress-screenshots
           path: cypress/screenshots
