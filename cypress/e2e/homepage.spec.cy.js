@@ -13,10 +13,10 @@ context('Verify that the home page is visible successfully', () => {
     })
   })
 
-  describe('Add products to cart first two products to cart', () => {
-    it('should add products to cart', () => {
+  describe.only('Cart functionality', () => {
+    it('Randomly add and remove products from the cart', () => {
       cy.AddProductsToCart(); // Custom command to add two random products to cart
-      cy.RemoveProductsFromCart(); // Custom command to remove all products from cart
+      cy.RemoveProductsFromCart(); // Custom command to remove all products from cart and check if the cart is empty
     })  
 })
 })

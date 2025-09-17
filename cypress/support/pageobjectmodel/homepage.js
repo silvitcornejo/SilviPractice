@@ -63,4 +63,5 @@ Cypress.Commands.add('RemoveProductsFromCart', () => {
   cy.get('.cart_quantity_delete').click({ multiple: true })
   cy.get('tbody tr').should('have.length', 0)
     cy.get('#empty_cart').should('contain.text', 'Cart is empty! Click here to buy products.')
+    cy.get('.cart-item').should('have.length', 0);
 })
