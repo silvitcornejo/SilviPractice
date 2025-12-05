@@ -13,7 +13,7 @@ context('Verify that the home page is visible successfully', () => {
     })
   })
 
-  describe.only('Cart functionality', () => {
+  describe('Cart functionality', () => {
     it('Randomly add and remove products from the cart', () => {
       cy.AddProductsToCart(); // Custom command to add two random products to cart
       cy.RemoveProductsFromCart(); // Custom command to remove all products from cart and check if the cart is empty
