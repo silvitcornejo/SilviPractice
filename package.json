@@ -4,9 +4,9 @@
   "description": "This is a personal repository \r # Pre- Requisits\r Have nodejs LTS installed",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
-    "test": "cypress run",
-    "nightly": "cypress run --spec \"cypress/e2e/**/*.cy.js\""
+    "cy:open": "npx cypress open",
+    "test": "npx cypress run",
+    "nightly": "npx cypress run --spec \"cypress/e2e/**/*.cy.js\""
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "Silvit",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/silvitcornejo/SilviPractice/issues"
   },

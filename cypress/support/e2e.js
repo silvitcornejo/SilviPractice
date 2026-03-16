@@ -17,7 +17,5 @@
 import './commands'
 
 import './pageobjectmodel/homepage'
-
-import './pageobjectmodel/singup-login'
-
 import './pageobjectmodel/header-footer'
+import './pageobjectmodel/singup-login'
